@@ -24,7 +24,7 @@ export class FormComponent implements OnInit{
         nome: new FormControl(this.dadosPessoa ? this.dadosPessoa.nome :''),
         email: new FormControl(this.dadosPessoa ? this.dadosPessoa.email :''),
         cpf: new FormControl(this.dadosPessoa ? this.dadosPessoa.cpf : ''),
-        dT_Aniversario: new FormControl(this.dadosPessoa ? new Date(this.dadosPessoa.dT_Aniversario) : null),
+        senha: new FormControl(this.dadosPessoa ? this.dadosPessoa.senha : ''),
         dT_Cadastro: new FormControl(Date.now),
         dT_Alteracao: new FormControl(null),
     });

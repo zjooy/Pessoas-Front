@@ -3,7 +3,7 @@ export interface PessoaListar{
     nome:string;
     email:string;
     cpf:string;
-    dT_Aniversario:Date;
+    senha:string;
     dT_Cadastro:Date;
     dT_Alteracao?:Date;
 }
