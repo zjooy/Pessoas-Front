@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h1>Detalhes usuários</h1>
+
+    <form>
+        <div class="mt-3">
+            <label>Nome</label>
+            <input type="text" placeholder="insira o nome" class="form-control" value="{{pessoa.nome}}" disabled>
+        </div>
+
+        <div class="mt-3">
+            <label>E-mail</label>
+            <input type="text" placeholder="insira o e-mail" class="form-control" value="{{pessoa.email}}" disabled>
+        </div>
+
+        <div class="mt-3">
+            <label>CPF</label>
+            <input type="text" placeholder="insira o CPF" class="form-control" value="{{pessoa.cpf}}" disabled>
+        </div>
+
+        <div class="mt-3">
+            <label>Data de aniversário</label>
+            <input type="datetime" placeholder="DD-MM-yyyy" class="form-control" value="{{pessoa.dT_Aniversario}}" disabled>
+        </div>
+
+        <div class="d-flex mt-3">
+            <a class="btn btn-info w-100" [routerLink]="['/']">Voltar</a>
+        </div>
+    </form>
+</div>

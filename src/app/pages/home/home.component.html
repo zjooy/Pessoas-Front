@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <button class="btn btn-success w-100" [routerLink]="['/cadastro']" routerLinkActive="router-link-active">Cadastrar nova pessoa</button>
+    <div>
+        <label class="form-label">Buscar:</label>
+        <input type="text" class="form-control" placeholder="Informe o nome" (input)="buscar($event)">
+    </div>
+
+    <table class="table table-hover table-bordered mt-5">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>CPF</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (pessoas.length > 0) {
+                @for (pessoa of pessoas; track $index) {
+                    <tr>
+                        <td>{{pessoa.iD_Pessoa}}</td>
+                        <td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.email}}</td>
+                        <td>{{pessoa.cpf}}</td>
+                        <td>
+                            <button class="btn btn-warning mx-2" [routerLink]="['/editar', pessoa.iD_Pessoa]">Editar</button>
+                            <button class="btn btn-info mx-2" [routerLink]="['/detalhes', pessoa.iD_Pessoa]">Detalhes</button>
+                            <button class="btn btn-danger mx-2" (click)="deletar(pessoa.iD_Pessoa)">Excluir</button>
+                        </td>
+                    </tr>
+                }
+            }@else {
+                <tr class="text-center">
+                    <td colspan="6">Nenhuma pessoa cadastrada.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
