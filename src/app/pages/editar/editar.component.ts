@@ -30,7 +30,6 @@ export class EditarComponent implements OnInit{
 
   editarPessoa(pessoa: PessoaListar){
     this.pessoaService.PutPessoa(pessoa).subscribe(response => {
-        console.log(response.dados)
         this.router.navigate(['/']);
     })
   }
