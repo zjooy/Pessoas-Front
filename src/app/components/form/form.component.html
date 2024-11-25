@@ -1,29 +1,58 @@
 <div class="container mt-5">
-    <h1>{{btnTitulo}}</h1>
+    <h1>{{ btnTitulo }}</h1>
 
     <form [formGroup]="pessoaForm" (ngSubmit)="submit()" #formDit="ngForm">
         <div class="mt-3">
             <label>Nome</label>
-            <input type="text" placeholder="insira o nome" class="form-control" formControlName="nome">
+            <input 
+                type="text" 
+                placeholder="Insira o nome" 
+                class="form-control" 
+                formControlName="nome">
+            <div *ngIf="pessoaForm.get('nome')?.touched && pessoaForm.get('nome')?.invalid" class="text-danger">
+                Nome é obrigatório.
+            </div>
         </div>
 
         <div class="mt-3">
             <label>E-mail</label>
-            <input type="text" placeholder="insira o e-mail" class="form-control" formControlName="email">
+            <input 
+                type="email" 
+                placeholder="Insira o e-mail" 
+                class="form-control" 
+                formControlName="email">
+            <div *ngIf="pessoaForm.get('email')?.touched && pessoaForm.get('email')?.invalid" class="text-danger">
+                <span *ngIf="pessoaForm.get('email')?.errors?.['required']">E-mail é obrigatório.</span>
+                <span *ngIf="pessoaForm.get('email')?.errors?.['email']">E-mail inválido.</span>
+            </div>
         </div>
 
         <div class="mt-3">
             <label>CPF</label>
-            <input type="text" placeholder="insira o CPF" class="form-control" formControlName="cpf">
+            <input 
+                type="text" 
+                placeholder="Insira o CPF" 
+                class="form-control" 
+                formControlName="cpf">
+            <div *ngIf="pessoaForm.get('cpf')?.touched && pessoaForm.get('cpf')?.invalid" class="text-danger">
+                CPF é obrigatório.
+            </div>
         </div>
 
         <div class="mt-3">
             <label>Senha</label>
-            <input type="password" placeholder="senha" class="form-control" formControlName="senha">
+            <input 
+                type="password" 
+                placeholder="Insira a senha" 
+                class="form-control" 
+                formControlName="senha">
+            <div *ngIf="pessoaForm.get('senha')?.touched && pessoaForm.get('senha')?.invalid" class="text-danger">
+                Senha é obrigatória.
+            </div>
         </div>
 
         <div class="d-flex mt-3">
-            <button class="btn btn-success w-50 mx-1" type="submit">{{btnAcao}}</button>
+            <button class="btn btn-success w-50 mx-1" type="submit" [disabled]="pessoaForm.invalid">{{ btnAcao }}</button>
             <a class="btn btn-info w-50" [routerLink]="['/']">Voltar</a>
         </div>
     </form>
