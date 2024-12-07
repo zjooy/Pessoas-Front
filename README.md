@@ -1,59 +1,31 @@
-# PessoasFront
+# Front-end para Cadastro de Pessoas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+Este projeto é um front-end desenvolvido em Angular para realizar operações de **CRUD** (Create, Read, Update, Delete) na API de Cadastro de Pessoas.
 
-## Development server
+## 📋 Funcionalidades
 
-To start a local development server, run:
+- **Listagem de Pessoas:** Exibição de uma lista com dados vindos da API.
+- **Cadastro de Pessoas:** Formulário para adicionar novas pessoas.
+- **Edição de Pessoas:** Alteração de dados existentes.
+- **Exclusão de Pessoas:** Remoção de registros diretamente da lista.
 
-```bash
-ng serve
-```
+## 🛠 Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Angular** (versão 19)
+- **Bootstrap**: Para criação de componentes visuais e estilização.
 
-## Code scaffolding
+## 📦 Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O projeto foi estruturado de forma modular, separando componentes e funcionalidades:
 
-```bash
-ng generate component component-name
-```
+- **Componentes:**
+  - `Form`: Gerencia o formulário de cadastro e edição.
+  - `Header`: Cabeçalho da aplicação.
+  - `Footer`: Rodapé da aplicação.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+![home](https://github.com/user-attachments/assets/23909abe-d21a-4ef9-a123-48d65bf70371)
 
-```bash
-ng generate --help
-```
+![mobile](https://github.com/user-attachments/assets/02e20815-04f2-494d-a17d-f2e64a24adf8)
 
-## Building
 
-To build the project run:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
