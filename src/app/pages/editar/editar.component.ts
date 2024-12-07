@@ -5,10 +5,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PessoaListar } from '../../models/Pessoas';
 import { CommonModule } from '@angular/common';
 import { response } from 'express';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-editar',
-  imports: [FormComponent, CommonModule],
+  imports: [FormComponent, CommonModule, HeaderComponent],
   templateUrl: './editar.component.html',
   styleUrl: './editar.component.css'
 })

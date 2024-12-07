@@ -1,3 +1,6 @@
+<div>
+    <app-header></app-header>
+</div>
 <div *ngIf="pessoa">
     <app-form [dadosPessoa]="pessoa" [btnAcao]="btnAcao" [btnTitulo]="btnTitulo" (onSubmit)="editarPessoa($event)"></app-form>
 </div>

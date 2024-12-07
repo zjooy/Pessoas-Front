@@ -1,5 +1,7 @@
+<div>
+    <app-header></app-header>
+</div>
 <div class="container mt-5">
-    <button class="btn btn-success w-100" [routerLink]="['/cadastro']" routerLinkActive="router-link-active">Cadastrar nova pessoa</button>
     <div>
         <label class="form-label">Buscar:</label>
         <input type="text" class="form-control" placeholder="Informe o nome" (input)="buscar($event)">
@@ -40,4 +42,7 @@
     </table>
 
 
+</div>
+<div>
+    <app-footer></app-footer>
 </div>

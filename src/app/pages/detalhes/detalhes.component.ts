@@ -3,10 +3,11 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { PessoasService } from '../../services/pessoas.service';
 import { response } from 'express';
 import { PessoaListar } from '../../models/Pessoas';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-detalhes',
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderComponent],
   templateUrl: './detalhes.component.html',
   styleUrl: './detalhes.component.css'
 })

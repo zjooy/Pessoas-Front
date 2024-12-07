@@ -3,10 +3,11 @@ import { FormComponent } from "../../components/form/form.component";
 import { PessoaListar } from '../../models/Pessoas';
 import { PessoasService } from '../../services/pessoas.service';
 import { Router } from '@angular/router';
+import { HeaderComponent } from "../../components/header/header.component";
 
 @Component({
   selector: 'app-cadastro',
-  imports: [FormComponent],
+  imports: [FormComponent, HeaderComponent],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
 })
